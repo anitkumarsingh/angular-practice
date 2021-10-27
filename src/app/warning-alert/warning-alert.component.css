@@ -1,0 +1,8 @@
+.warning{
+  color:red;
+  border:red;
+  background-color:rgba(5,255,255,0.6);
+}
+.online{
+  background: aquamarine;
+}
