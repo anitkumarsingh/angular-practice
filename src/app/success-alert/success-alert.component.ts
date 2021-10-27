@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SuccessAlertComponent implements OnInit {
   allowNewServer = false;  
   serverCreationStatus ='No server was created';
-  serverName ='';
+  serverName:string ='Testserver';
   constructor() { 
     setTimeout(() => {
       this.allowNewServer =true
