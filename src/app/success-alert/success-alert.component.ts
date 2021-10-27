@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SuccessAlertComponent implements OnInit {
   allowNewServer = false;  
   serverCreationStatus ='No server was created';
-  serverName:string ='Testserver';
+  serverName:string ='';
   constructor() { 
     setTimeout(() => {
       this.allowNewServer =true
@@ -19,7 +19,7 @@ export class SuccessAlertComponent implements OnInit {
   }
 
   onServerCreation () {
-   this.serverCreationStatus ='Server is created now'
+   this.serverCreationStatus ='Server is created with Name' +' '   + this.serverName + ' server';
   }
   onUpdateServer(event:Event){
     this.serverName =(<HTMLInputElement> event.target).value
