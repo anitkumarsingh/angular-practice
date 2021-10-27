@@ -14,5 +14,9 @@ import { Component } from '@angular/core';
 
 export class WarningAlertComponent {
   serverId = 10;
-  serverStatus ='Offline'
+  serverStatus ='Offline';
+  username =''
+  onUserNameUpdate(){
+    this.username =''
+  }
 }
