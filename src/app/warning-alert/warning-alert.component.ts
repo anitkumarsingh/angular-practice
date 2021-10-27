@@ -14,9 +14,16 @@ import { Component } from '@angular/core';
 
 export class WarningAlertComponent {
   serverId = 10;
-  serverStatus ='Offline';
+  serverStatus ='';
   username =''
   onUserNameUpdate(){
     this.username =''
+  }
+  constructor(){
+    this.serverStatus = Math.random() > 0.5 ? 'online':'offline';
+   
+  }
+  getColor(){
+    return this.serverStatus === 'online' ?  'green':'red';
   }
 }
