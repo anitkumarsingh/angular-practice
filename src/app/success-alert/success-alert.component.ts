@@ -9,6 +9,7 @@ export class SuccessAlertComponent implements OnInit {
   allowNewServer = false;  
   serverCreationStatus ='No server was created';
   serverName:string ='';
+  serverCreated = false;
   constructor() { 
     setTimeout(() => {
       this.allowNewServer =true
@@ -19,6 +20,7 @@ export class SuccessAlertComponent implements OnInit {
   }
 
   onServerCreation () {
+   this.serverCreated = true;
    this.serverCreationStatus ='Server is created with Name' +' '   + this.serverName + ' server';
   }
   onUpdateServer(event:Event){

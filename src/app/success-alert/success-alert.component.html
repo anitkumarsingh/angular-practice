@@ -6,4 +6,4 @@
       <br/><br/>
       <button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onServerCreation()  ">Add Server</button>
       <!-- <p [innerText]="allowNewServer"></p> -->
-      <p>{{serverCreationStatus}}</p>
+      <p *ngIf="serverCreated">{{serverCreationStatus}}</p>
