@@ -10,6 +10,7 @@ export class SuccessAlertComponent implements OnInit {
   serverCreationStatus ='No server was created';
   serverName:string ='';
   serverCreated = false;
+  servers =['production'];
   constructor() { 
     setTimeout(() => {
       this.allowNewServer =true
@@ -22,6 +23,7 @@ export class SuccessAlertComponent implements OnInit {
   onServerCreation () {
    this.serverCreated = true;
    this.serverCreationStatus ='Server is created with Name' +' '   + this.serverName + ' server';
+   this.servers.push(this.serverName);
   }
   onUpdateServer(event:Event){
     this.serverName =(<HTMLInputElement> event.target).value

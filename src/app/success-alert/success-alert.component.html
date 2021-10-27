@@ -4,10 +4,10 @@
       <input type="text" [(ngModel)]="serverName">
       <!-- <h3>{{serverName}}</h3> -->
       <br/><br/>
-      <button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onServerCreation()  ">Add Server</button>
+      <button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onServerCreation()">Add Server</button>
       <!-- <p [innerText]="allowNewServer"></p> -->
       <p *ngIf="serverCreated;else noServer">{{serverCreationStatus}}</p>
       <ng-template #noServer>
         <p >No Server was created!</p>
       </ng-template>
-     
+      <app-warning-alert *ngFor="let server of servers"></app-warning-alert>
